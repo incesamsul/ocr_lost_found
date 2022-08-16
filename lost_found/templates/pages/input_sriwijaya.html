@@ -1,0 +1,150 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="page-content-wrapper py-3">
+  <div class="container">
+    <!-- Element Heading -->
+    <div class="element-heading">
+      {{ data }} {{ data.1.2|slice:"1:" }}
+      <h6>Lost & found form sriwijaya</h6>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST" action="{% url 'add_item' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label class="form-label" for="nama_penumpang"
+              >Nama penumpang</label
+            >
+            <input
+              required
+              name="nama_penumpang"
+              class="form-control"
+              id="nama_penumpang"
+              type="text"
+              placeholder="nama penumpang"
+              value="{{ data.0|last }} {{ data.1|first }}"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pesawat">Pesawat</label>
+            <input
+              required
+              name="pesawat"
+              class="form-control"
+              id="pesawat"
+              type="text"
+              placeholder="Pesawat"
+              value="{{ data|last }}"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tanggal">Tanggal</label>
+            <input
+              required
+              name="tanggal"
+              class="form-control"
+              id="tanggal"
+              type="text"
+              placeholder="tanggal"
+              value="{{ data.8|first }}"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="kode_booking">Kode booking</label>
+            <input
+              value="{{ data.5|first }}"
+              required
+              name="kode_booking"
+              class="form-control"
+              id="kode booking"
+              type="text"
+              placeholder="kode booking"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="kode_penerbangan"
+              >Kode Penerbangan</label
+            >
+            <input
+              required
+              name="kode_penerbangan"
+              class="form-control"
+              id="kode booking"
+              type="text"
+              placeholder="kode Penerbangan"
+              value="{{ data.5|last }}"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tujuan">Tujuan</label>
+            <input
+              value="{{ data.6|first }}"
+              required
+              name="tujuan"
+              class="form-control"
+              id="kode booking"
+              type="text"
+              placeholder="Tujuan"
+            />
+          </div>
+
+          <button
+            class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
+            type="submit"
+          >
+            Simpan
+            <svg
+              class="bi bi-arrow-right-short"
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %} table segment {% endcomment %}
+<div class="page-content-wrapper py-3">
+  <div class="container">
+    <!-- Element Heading -->
+    <div class="element-heading">
+      <h6>Data Lost & found form</h6>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-body table-responsive">
+        <table class="table table-bordered">
+          <tr>
+            <td>nama penumpang</td>
+            <td>pesawat</td>
+            <td>tangal</td>
+            <td>kode booking</td>
+          </tr>
+          {% for i in barang %}
+          <tr>
+            <td>{{ i.nama_penumpang }}</td>
+            <td>{{ i.pesawat }}</td>
+            <td>{{ i.tanggal }}</td>
+            <td>{{ i.kode_booking }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

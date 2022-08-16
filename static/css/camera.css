@@ -1,0 +1,54 @@
+body {
+    height: 100vh;
+    /* overflow: hidden !important; */
+}
+
+#camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#startbutton {
+    padding: 15px;
+    font-size: 30px;
+    border: none;
+    margin-top: 20px;
+    background-color: transparent;
+    color: #282e58;
+}
+
+#video {
+    height: 100% !important;
+    width: 100vw;
+}
+
+.title {
+    font-size: 18px;
+    width: 100vw;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 30px;
+    border: none;
+    /* background-color: #eee; */
+}
+
+.btn.scan {
+    margin: auto;
+}
+
+#btn-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: red !important;
+}
+
+#photo {
+    opacity: 0;
+}

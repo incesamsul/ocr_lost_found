@@ -1,0 +1,31 @@
+{% extends "base_pos.html" %} {% block content %} {% comment %}
+<h2>Lost found</h2>
+{% endcomment %}
+<div class="card border-0">
+  <div class="card-header bg-primary text-white">
+    <h4>Data lost found</h4>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <tr>
+        <td>nama penumpang</td>
+        <td>pesawat</td>
+        <td>tangal</td>
+        <td>kode booking</td>
+        <td>Kode penerbangan</td>
+        <td>tujuan</td>
+      </tr>
+      {% for i in barang %}
+      <tr>
+        <td>{{ i.nama_penumpang }}</td>
+        <td>{{ i.pesawat }}</td>
+        <td>{{ i.tanggal }}</td>
+        <td>{{ i.kode_booking }}</td>
+        <td>{{ i.kode_penerbangan }}</td>
+        <td>{{ i.tujuan }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock content %}

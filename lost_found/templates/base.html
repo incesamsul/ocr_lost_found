@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Lost found app</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="lost found app" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#0134d4" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/icons/icon-96x96.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS Libraries -->
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/bootstrap-icons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/tiny-slider.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/baguetteBox.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/rangeslider.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'pwa_affan/css/vanilla-dataTables.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'pwa_affan/css/apexcharts.css' %}" />
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'pwa_affan/style.css' %}" />
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/camera.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css"
+    />
+    {% comment %}
+    <script type="module" src="{% static 'js/cam.js' %}"></script>
+    {% endcomment %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="{% static 'pwa_affan/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/slideToggle.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/internet-status.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/countdown.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/rangeslider.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/vanilla-dataTables.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/index.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/magic-grid.min.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/dark-rtl.js' %}"></script>
+    <script src="{% static 'pwa_affan/js/active.js' %}"></script>
+    <!-- PWA -->
+    <script src="{% static 'pwa_affan/js/pwa.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>
